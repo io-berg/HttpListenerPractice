@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace webserverpage
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             HttpListener listener = new HttpListener();
             listener.Prefixes.Add("http://localhost:8080/");
@@ -15,9 +17,13 @@ namespace webserverpage
             listener.Start();
             System.Console.WriteLine("Listening on port 8080...");
 
+
             while (true)
             {
-                HttpListenerContext context = listener.GetContext();
+                HttpListenerContext context = await listener.GetContextAsync();
+
+                if (context == null) continue;
+
                 HttpListenerRequest request = context.Request;
                 HttpListenerResponse response = context.Response;
 
