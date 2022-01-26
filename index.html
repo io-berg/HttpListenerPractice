@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost:8080/styles.css/">
+    </head>
+    <body>
+        <h1 id="title">256-pixel Paint</h1>
+        <div id="paintArea">
+            <div id="controls">
+                <h3 id="controlsHeader">Controls</h3>
+                <div id="colorPickDiv">
+                    <label id="colorTitle">Select Color:</label>
+                    <input id="colorInput" type="color" value="#00000"></input>
+                </div>
+                <button id="resetBtn">Reset Canvas</button>
+                <button id="rainbowBtn">Rainbow Mode</button>
+                <label for="canvasXSize">Canvas width: </label>
+                <input type="number" id="canvasXSize" max="128" min="1" value="16">
+                <label for="canvasYSize">Canvas height: </label>
+                <input type="number" id="canvasYSize" max="128" min="1" value="16">
+                <button id="sizeAdjustBtn">Resize</button>
+
+            </div>
+            <div id="canvas"></div>
+        </div>
+        
+        <script src="http://localhost:8080/scripts.js/" async defer></script>
+    </body>
+</html>

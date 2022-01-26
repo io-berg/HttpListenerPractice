@@ -1,0 +1,34 @@
+#title{
+    text-align: center;
+    font-family: fantasy;
+    padding-top: 2em;
+}
+
+#paintArea {
+    margin: auto;
+    height: 600px;
+    width: 1000px;
+}
+
+#controls {
+    float:left;
+    display:flex;
+    flex-direction: column;
+}
+
+#colorTitle {
+    float:left;
+    top: 6px;
+    position:relative;
+    margin-right: 4px;
+}
+
+#canvas{
+    margin:auto;
+    display: grid;
+    height: 700px;
+    width: 700px; 
+    background-color: white;
+    border: solid black;
+    grid-template-columns: repeat(16, auto);
+}
